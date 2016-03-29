@@ -1,0 +1,24 @@
+# setup environment between development/production
+# comment line or change "development" to "production" on production server
+SetEnv APPLICATION_ENV development
+
+# if mod_rewrite exists use rules
+<IfModule mod_rewrite.c>
+    # set parameter to detect mod rewrite in PHP
+    SetEnv APPLICATION_REWRITE enabled
+
+    # turn on rewrite
+    RewriteEngine On
+    # for all relative path are taken as basement /
+    RewriteBase /
+
+    # if path is index.php do not change it and do not process further
+    RewriteRule ^index\.php$ - [L]
+
+    # if request is not real file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # and if request is not real directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # then change request to index.php in path / and do not process further
+    RewriteRule . /index.php [L]
+</IfModule>
