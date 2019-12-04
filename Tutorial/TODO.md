@@ -1,4 +1,5 @@
 - check everything against PSRs for PHP
+- add unit tests
 - improve environments
 - add logger
 - improve readme
