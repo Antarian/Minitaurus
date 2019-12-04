@@ -1,0 +1,5 @@
+- check everything against PSRs for PHP
+- improve environments
+- add logger
+- improve readme
+- publish on packagist

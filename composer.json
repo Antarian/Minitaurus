@@ -1,0 +1,21 @@
+{
+  "name": "antarian/minitaurus",
+  "version": "1.0.0-alpha",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Peter Labos",
+      "email": "peter.labos@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AntarianMinitaurus\\": "AntarianMinitaurus/",
+      "Main\\": "Main/"
+    }
+  }
+}
