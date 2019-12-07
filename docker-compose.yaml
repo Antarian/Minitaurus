@@ -1,0 +1,15 @@
+# development docker-compose file
+version: '3.6'
+services:
+  minitaurus:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    tty: true
+    ports:
+      - 8080:8080
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/minitaurus
+    command: "php -S 0.0.0.0:8080"
